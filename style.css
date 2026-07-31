@@ -13,3 +13,7 @@
 .character-stats.open {
     display: block;
 }
+
+ul {
+    list-style-type: none;
+}
