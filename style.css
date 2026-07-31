@@ -1,0 +1,15 @@
+.perk-list {
+    display: none;
+}
+
+.perk-list.open {
+    display: block;
+}
+
+.character-stats {
+    display: none;
+}
+
+.character-stats.open {
+    display: block;
+}
