@@ -1,752 +1,585 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Unofficial 7DTD Character Planner</title>
 
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-    <header>
-        <h1>Unofficial 7DTD Character Planner</h1>
+  <body>
+    <header class="page-header">
+      <div class="site-title">
+        <h1>Character Builder</h1>
+        <p>Unnoficial character planner for 7 days to die.</p>
+      </div>
+      <section class="character-summary">
+        <div class="summary-stat">
+          <span>Level</span>
+          <strong>1</strong>
+        </div>
+
+        <div class="summary-stat">
+          <span>Available Points</span>
+          <strong>0</strong>
+        </div>
+      </section>
     </header>
 
     <nav class="attribute-tabs">
-        <button
-            class="attribute-tab active"
-            type="button"
-            data-attribute="character"
-        >
-            Character
-        </button>
+      <button
+        class="attribute-tab active"
+        type="button"
+        data-attribute="character"
+      >
+        Character
+      </button>
 
-        <button
-            class="attribute-tab"
-            type="button"
-            data-attribute="perception"
-        >
-            Perception
-        </button>
+      <button class="attribute-tab" type="button" data-attribute="perception">
+        Perception
+      </button>
 
-        <button
-            class="attribute-tab"
-            type="button"
-            data-attribute="strength"
-        >
-            Strength
-        </button>
+      <button class="attribute-tab" type="button" data-attribute="strength">
+        Strength
+      </button>
 
-        <button
-            class="attribute-tab"
-            type="button"
-            data-attribute="fortitude"
-        >
-            Fortitude
-        </button>
+      <button class="attribute-tab" type="button" data-attribute="fortitude">
+        Fortitude
+      </button>
 
-        <button
-            class="attribute-tab"
-            type="button"
-            data-attribute="agility"
-        >
-            Agility
-        </button>
+      <button class="attribute-tab" type="button" data-attribute="agility">
+        Agility
+      </button>
 
-        <button
-            class="attribute-tab"
-            type="button"
-            data-attribute="intellect"
-        >
-            Intellect
-        </button>
+      <button class="attribute-tab" type="button" data-attribute="intellect">
+        Intellect
+      </button>
 
-        <button
-            class="attribute-tab"
-            type="button"
-            data-attribute="general"
-        >
-            General
-        </button>
+      <button class="attribute-tab" type="button" data-attribute="general">
+        General
+      </button>
 
-        <button
-            class="attribute-tab"
-            type="button"
-            data-attribute="book-perks"
-        >
-            Book Perks
-        </button>
+      <button class="attribute-tab" type="button" data-attribute="book-perks">
+        Book Perks
+      </button>
     </nav>
 
-    <main class="attribute-panels">
-        <!-- Character -->
-        <section
-            class="attribute-panel active"
-            id="character"
-        >
+    <main class="builder-layout">
+      <section class="skill-browser">
+        <div class="attribute-panels">
+          <section class="attribute-panel active" id="character">
             <div class="panel-heading">
-                <h2>Character</h2>
+              <h2>Character</h2>
             </div>
 
             <div class="perk-list">
-                <ul>
-                    <li>
-                        <button
-                            class="perk-button"
-                            type="button"
-                        >
-                            Level
-                        </button>
-                    </li>
+              <ul>
+                <li>
+                  <button class="perk-button" type="button">Level</button>
+                </li>
 
-                    <li>
-                        <button
-                            class="perk-button"
-                            type="button"
-                        >
-                            Stats
-                        </button>
-                    </li>
-                </ul>
+                <li>
+                  <button class="perk-button" type="button">Stats</button>
+                </li>
+              </ul>
             </div>
-        </section>
+          </section>
 
-        <!-- Perception -->
-        <section
-            class="attribute-panel"
-            id="perception"
-        >
+          <!-- Perception -->
+          <section class="attribute-panel" id="perception">
             <div class="panel-heading">
-                <h2>Perception</h2>
+              <h2>Perception</h2>
 
-                <div class="attribute-controls">
-                    <button
-                        class="attribute-minus"
-                        type="button"
-                    >
-                        -
-                    </button>
+              <div class="attribute-controls">
+                <button class="attribute-minus" type="button">-</button>
 
-                    <span class="attribute-level">
-                        1 / 10
-                    </span>
+                <span class="attribute-level"> 1 / 10 </span>
 
-                    <button
-                        class="attribute-plus"
-                        type="button"
-                    >
-                        +
-                    </button>
-                </div>
+                <button class="attribute-plus" type="button">+</button>
+              </div>
             </div>
 
             <div class="perk-list">
-                <h4 class="perk-category">
-                    Combat Perks
-                </h4>
+              <h4 class="perk-category">Combat Perks</h4>
 
-                <ul>
-                    <li>
-                        <button class="perk-button" type="button">
-                            Dead Eye
-                        </button>
-                    </li>
+              <ul>
+                <li>
+                  <button class="perk-button" type="button">Dead Eye</button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Demolitions Expert
-                        </button>
-                    </li>
+                <li>
+                  <button class="perk-button" type="button">
+                    Demolitions Expert
+                  </button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Spear Master
-                        </button>
-                    </li>
+                <li>
+                  <button class="perk-button" type="button">
+                    Spear Master
+                  </button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Quick and Perceptive
-                        </button>
-                    </li>
-                </ul>
+                <li>
+                  <button class="perk-button" type="button">
+                    Quick and Perceptive
+                  </button>
+                </li>
+              </ul>
 
-                <h4 class="perk-category">
-                    General Perception Perks
-                </h4>
+              <h4 class="perk-category">General Perception Perks</h4>
 
-                <ul>
-                    <li>
-                        <button class="perk-button" type="button">
-                            The Infiltrator
-                        </button>
-                    </li>
+              <ul>
+                <li>
+                  <button class="perk-button" type="button">
+                    The Infiltrator
+                  </button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            The Animal Tracker
-                        </button>
-                    </li>
+                <li>
+                  <button class="perk-button" type="button">
+                    The Animal Tracker
+                  </button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            The Penetrator
-                        </button>
-                    </li>
+                <li>
+                  <button class="perk-button" type="button">
+                    The Penetrator
+                  </button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Perception Mastery
-                        </button>
-                    </li>
-                </ul>
+                <li>
+                  <button class="perk-button" type="button">
+                    Perception Mastery
+                  </button>
+                </li>
+              </ul>
 
-                <h4 class="perk-category">
-                    Scavenging Perks
-                </h4>
+              <h4 class="perk-category">Scavenging Perks</h4>
 
-                <ul>
-                    <li>
-                        <button class="perk-button" type="button">
-                            Treasure Hunter
-                        </button>
-                    </li>
+              <ul>
+                <li>
+                  <button class="perk-button" type="button">
+                    Treasure Hunter
+                  </button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Salvage Operations
-                        </button>
-                    </li>
-                </ul>
+                <li>
+                  <button class="perk-button" type="button">
+                    Salvage Operations
+                  </button>
+                </li>
+              </ul>
             </div>
-        </section>
+          </section>
 
-        <!-- Strength -->
-        <section
-            class="attribute-panel"
-            id="strength"
-        >
+          <!-- Strength -->
+          <section class="attribute-panel" id="strength">
             <div class="panel-heading">
-                <h2>Strength</h2>
+              <h2>Strength</h2>
 
-                <div class="attribute-controls">
-                    <button
-                        class="attribute-minus"
-                        type="button"
-                    >
-                        -
-                    </button>
+              <div class="attribute-controls">
+                <button class="attribute-minus" type="button">-</button>
 
-                    <span class="attribute-level">
-                        1 / 10
-                    </span>
+                <span class="attribute-level"> 1 / 10 </span>
 
-                    <button
-                        class="attribute-plus"
-                        type="button"
-                    >
-                        +
-                    </button>
-                </div>
+                <button class="attribute-plus" type="button">+</button>
+              </div>
             </div>
 
             <div class="perk-list">
-                <h4 class="perk-category">
-                    Combat Perks
-                </h4>
+              <h4 class="perk-category">Combat Perks</h4>
 
-                <ul>
-                    <li>
-                        <button class="perk-button" type="button">
-                            Boomstick
-                        </button>
-                    </li>
+              <ul>
+                <li>
+                  <button class="perk-button" type="button">Boomstick</button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Pummel Pete
-                        </button>
-                    </li>
+                <li>
+                  <button class="perk-button" type="button">Pummel Pete</button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Skull Crusher
-                        </button>
-                    </li>
+                <li>
+                  <button class="perk-button" type="button">
+                    Skull Crusher
+                  </button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Grand Slam
-                        </button>
-                    </li>
+                <li>
+                  <button class="perk-button" type="button">Grand Slam</button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Big and Fast
-                        </button>
-                    </li>
-                </ul>
+                <li>
+                  <button class="perk-button" type="button">
+                    Big and Fast
+                  </button>
+                </li>
+              </ul>
 
-                <h4 class="perk-category">
-                    General Strength Perks
-                </h4>
+              <h4 class="perk-category">General Strength Perks</h4>
 
-                <ul>
-                    <li>
-                        <button class="perk-button" type="button">
-                            Pack Mule
-                        </button>
-                    </li>
+              <ul>
+                <li>
+                  <button class="perk-button" type="button">Pack Mule</button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Strength Mastery
-                        </button>
-                    </li>
-                </ul>
+                <li>
+                  <button class="perk-button" type="button">
+                    Strength Mastery
+                  </button>
+                </li>
+              </ul>
 
-                <h4 class="perk-category">
-                    Construction Perks
-                </h4>
+              <h4 class="perk-category">Construction Perks</h4>
 
-                <ul>
-                    <li>
-                        <button class="perk-button" type="button">
-                            Miner 69'er
-                        </button>
-                    </li>
+              <ul>
+                <li>
+                  <button class="perk-button" type="button">Miner 69'er</button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Mother Lode
-                        </button>
-                    </li>
+                <li>
+                  <button class="perk-button" type="button">Mother Lode</button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Junk Miner
-                        </button>
-                    </li>
-                </ul>
+                <li>
+                  <button class="perk-button" type="button">Junk Miner</button>
+                </li>
+              </ul>
             </div>
-        </section>
+          </section>
 
-        <!-- Fortitude -->
-        <section
-            class="attribute-panel"
-            id="fortitude"
-        >
+          <!-- Fortitude -->
+          <section class="attribute-panel" id="fortitude">
             <div class="panel-heading">
-                <h2>Fortitude</h2>
+              <h2>Fortitude</h2>
 
-                <div class="attribute-controls">
-                    <button
-                        class="attribute-minus"
-                        type="button"
-                    >
-                        -
-                    </button>
+              <div class="attribute-controls">
+                <button class="attribute-minus" type="button">-</button>
 
-                    <span class="attribute-level">
-                        1 / 10
-                    </span>
+                <span class="attribute-level"> 1 / 10 </span>
 
-                    <button
-                        class="attribute-plus"
-                        type="button"
-                    >
-                        +
-                    </button>
-                </div>
+                <button class="attribute-plus" type="button">+</button>
+              </div>
             </div>
 
             <div class="perk-list">
-                <h4 class="perk-category">
-                    Combat Perks
-                </h4>
+              <h4 class="perk-category">Combat Perks</h4>
 
-                <ul>
-                    <li>
-                        <button class="perk-button" type="button">
-                            The Brawler
-                        </button>
-                    </li>
+              <ul>
+                <li>
+                  <button class="perk-button" type="button">The Brawler</button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Machine Gunner
-                        </button>
-                    </li>
+                <li>
+                  <button class="perk-button" type="button">
+                    Machine Gunner
+                  </button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Lightning Hands
-                        </button>
-                    </li>
-                </ul>
+                <li>
+                  <button class="perk-button" type="button">
+                    Lightning Hands
+                  </button>
+                </li>
+              </ul>
 
-                <h4 class="perk-category">
-                    Survival Perks
-                </h4>
+              <h4 class="perk-category">Survival Perks</h4>
 
-                <ul>
-                    <li>
-                        <button class="perk-button" type="button">
-                            The Huntsman
-                        </button>
-                    </li>
+              <ul>
+                <li>
+                  <button class="perk-button" type="button">
+                    The Huntsman
+                  </button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Pain Tolerance
-                        </button>
-                    </li>
+                <li>
+                  <button class="perk-button" type="button">
+                    Pain Tolerance
+                  </button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Fortitude Mastery
-                        </button>
-                    </li>
-                </ul>
+                <li>
+                  <button class="perk-button" type="button">
+                    Fortitude Mastery
+                  </button>
+                </li>
+              </ul>
 
-                <h4 class="perk-category">
-                    Recovery Perks
-                </h4>
+              <h4 class="perk-category">Recovery Perks</h4>
 
-                <ul>
-                    <li>
-                        <button class="perk-button" type="button">
-                            Siphoning Strikes
-                        </button>
-                    </li>
+              <ul>
+                <li>
+                  <button class="perk-button" type="button">
+                    Siphoning Strikes
+                  </button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Healing Factor
-                        </button>
-                    </li>
+                <li>
+                  <button class="perk-button" type="button">
+                    Healing Factor
+                  </button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Iron Gut
-                        </button>
-                    </li>
+                <li>
+                  <button class="perk-button" type="button">Iron Gut</button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Rule 1: Cardio
-                        </button>
-                    </li>
-                </ul>
+                <li>
+                  <button class="perk-button" type="button">
+                    Rule 1: Cardio
+                  </button>
+                </li>
+              </ul>
             </div>
-        </section>
+          </section>
 
-        <!-- Agility -->
-        <section
-            class="attribute-panel"
-            id="agility"
-        >
+          <!-- Agility -->
+          <section class="attribute-panel" id="agility">
             <div class="panel-heading">
-                <h2>Agility</h2>
+              <h2>Agility</h2>
 
-                <div class="attribute-controls">
-                    <button
-                        class="attribute-minus"
-                        type="button"
-                    >
-                        -
-                    </button>
+              <div class="attribute-controls">
+                <button class="attribute-minus" type="button">-</button>
 
-                    <span class="attribute-level">
-                        1 / 10
-                    </span>
+                <span class="attribute-level"> 1 / 10 </span>
 
-                    <button
-                        class="attribute-plus"
-                        type="button"
-                    >
-                        +
-                    </button>
-                </div>
+                <button class="attribute-plus" type="button">+</button>
+              </div>
             </div>
 
             <div class="perk-list">
-                <h4 class="perk-category">
-                    Combat Perks
-                </h4>
+              <h4 class="perk-category">Combat Perks</h4>
 
-                <ul>
-                    <li>
-                        <button class="perk-button" type="button">
-                            Archery
-                        </button>
-                    </li>
+              <ul>
+                <li>
+                  <button class="perk-button" type="button">Archery</button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Gunslinger
-                        </button>
-                    </li>
+                <li>
+                  <button class="perk-button" type="button">Gunslinger</button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Deep Cuts
-                        </button>
-                    </li>
+                <li>
+                  <button class="perk-button" type="button">Deep Cuts</button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Whirlwind
-                        </button>
-                    </li>
-                </ul>
+                <li>
+                  <button class="perk-button" type="button">Whirlwind</button>
+                </li>
+              </ul>
 
-                <h4 class="perk-category">
-                    Athletic Perks
-                </h4>
+              <h4 class="perk-category">Athletic Perks</h4>
 
-                <ul>
-                    <li>
-                        <button class="perk-button" type="button">
-                            Run and Gun
-                        </button>
-                    </li>
+              <ul>
+                <li>
+                  <button class="perk-button" type="button">Run and Gun</button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Hard Target
-                        </button>
-                    </li>
+                <li>
+                  <button class="perk-button" type="button">Hard Target</button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Parkour
-                        </button>
-                    </li>
+                <li>
+                  <button class="perk-button" type="button">Parkour</button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Agility Mastery
-                        </button>
-                    </li>
-                </ul>
+                <li>
+                  <button class="perk-button" type="button">
+                    Agility Mastery
+                  </button>
+                </li>
+              </ul>
 
-                <h4 class="perk-category">
-                    Stealth Perks
-                </h4>
+              <h4 class="perk-category">Stealth Perks</h4>
 
-                <ul>
-                    <li>
-                        <button class="perk-button" type="button">
-                            Hidden Strike
-                        </button>
-                    </li>
+              <ul>
+                <li>
+                  <button class="perk-button" type="button">
+                    Hidden Strike
+                  </button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            From The Shadows
-                        </button>
-                    </li>
-                </ul>
+                <li>
+                  <button class="perk-button" type="button">
+                    From The Shadows
+                  </button>
+                </li>
+              </ul>
             </div>
-        </section>
+          </section>
 
-        <!-- Intellect -->
-        <section
-            class="attribute-panel"
-            id="intellect"
-        >
+          <!-- Intellect -->
+          <section class="attribute-panel" id="intellect">
             <div class="panel-heading">
-                <h2>Intellect</h2>
+              <h2>Intellect</h2>
 
-                <div class="attribute-controls">
-                    <button
-                        class="attribute-minus"
-                        type="button"
-                    >
-                        -
-                    </button>
+              <div class="attribute-controls">
+                <button class="attribute-minus" type="button">-</button>
 
-                    <span class="attribute-level">
-                        1 / 10
-                    </span>
+                <span class="attribute-level"> 1 / 10 </span>
 
-                    <button
-                        class="attribute-plus"
-                        type="button"
-                    >
-                        +
-                    </button>
-                </div>
+                <button class="attribute-plus" type="button">+</button>
+              </div>
             </div>
 
             <div class="perk-list">
-                <h4 class="perk-category">
-                    Combat Perks
-                </h4>
+              <h4 class="perk-category">Combat Perks</h4>
 
-                <ul>
-                    <li>
-                        <button class="perk-button" type="button">
-                            Electrocutioner
-                        </button>
-                    </li>
+              <ul>
+                <li>
+                  <button class="perk-button" type="button">
+                    Electrocutioner
+                  </button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Robotics Inventor
-                        </button>
-                    </li>
+                <li>
+                  <button class="perk-button" type="button">
+                    Robotics Inventor
+                  </button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Calculated Attack
-                        </button>
-                    </li>
-                </ul>
+                <li>
+                  <button class="perk-button" type="button">
+                    Calculated Attack
+                  </button>
+                </li>
+              </ul>
 
-                <h4 class="perk-category">
-                    Influence Perks
-                </h4>
+              <h4 class="perk-category">Influence Perks</h4>
 
-                <ul>
-                    <li>
-                        <button class="perk-button" type="button">
-                            Better Barter
-                        </button>
-                    </li>
+              <ul>
+                <li>
+                  <button class="perk-button" type="button">
+                    Better Barter
+                  </button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            The Daring Adventurer
-                        </button>
-                    </li>
+                <li>
+                  <button class="perk-button" type="button">
+                    The Daring Adventurer
+                  </button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Charismatic Nature
-                        </button>
-                    </li>
-                </ul>
+                <li>
+                  <button class="perk-button" type="button">
+                    Charismatic Nature
+                  </button>
+                </li>
+              </ul>
 
-                <h4 class="perk-category">
-                    General Intellect Perks
-                </h4>
+              <h4 class="perk-category">General Intellect Perks</h4>
 
-                <ul>
-                    <li>
-                        <button class="perk-button" type="button">
-                            Physician
-                        </button>
-                    </li>
+              <ul>
+                <li>
+                  <button class="perk-button" type="button">Physician</button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Advanced Engineering
-                        </button>
-                    </li>
+                <li>
+                  <button class="perk-button" type="button">
+                    Advanced Engineering
+                  </button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Grease Monkey
-                        </button>
-                    </li>
+                <li>
+                  <button class="perk-button" type="button">
+                    Grease Monkey
+                  </button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Intellect Mastery
-                        </button>
-                    </li>
-                </ul>
+                <li>
+                  <button class="perk-button" type="button">
+                    Intellect Mastery
+                  </button>
+                </li>
+              </ul>
             </div>
-        </section>
+          </section>
 
-        <!-- General -->
-        <section
-            class="attribute-panel"
-            id="general"
-        >
+          <!-- General -->
+          <section class="attribute-panel" id="general">
             <div class="panel-heading">
-                <h2>General Perks</h2>
+              <h2>General Perks</h2>
             </div>
 
             <div class="perk-list">
-                <h4 class="perk-category">
-                    General Perks
-                </h4>
+              <h4 class="perk-category">General Perks</h4>
 
-                <ul>
-                    <li>
-                        <button class="perk-button" type="button">
-                            Light Armor
-                        </button>
-                    </li>
+              <ul>
+                <li>
+                  <button class="perk-button" type="button">Light Armor</button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Medium Armor
-                        </button>
-                    </li>
+                <li>
+                  <button class="perk-button" type="button">
+                    Medium Armor
+                  </button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Heavy Armor
-                        </button>
-                    </li>
+                <li>
+                  <button class="perk-button" type="button">Heavy Armor</button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Master Chef
-                        </button>
-                    </li>
+                <li>
+                  <button class="perk-button" type="button">Master Chef</button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Living Off The Land
-                        </button>
-                    </li>
+                <li>
+                  <button class="perk-button" type="button">
+                    Living Off The Land
+                  </button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Lock Picking
-                        </button>
-                    </li>
+                <li>
+                  <button class="perk-button" type="button">
+                    Lock Picking
+                  </button>
+                </li>
 
-                    <li>
-                        <button class="perk-button" type="button">
-                            Lucky Looter
-                        </button>
-                    </li>
-                </ul>
+                <li>
+                  <button class="perk-button" type="button">
+                    Lucky Looter
+                  </button>
+                </li>
+              </ul>
             </div>
-        </section>
+          </section>
 
-        <!-- Book Perks -->
-        <section
-            class="attribute-panel"
-            id="book-perks"
-        >
+          <!-- Book Perks -->
+          <section class="attribute-panel" id="book-perks">
             <div class="panel-heading">
-                <h2>Book Perks</h2>
+              <h2>Book Perks</h2>
             </div>
 
             <p>Coming Soon.</p>
+          </section>
+        </div>
+      </section>
+
+      <aside class="perk-details">
+        <header class="perk-details-header">
+          <div class="perk-icon-placeholder">Icon</div>
+          <div>
+            <p class="perk-type">Select A Perk</p>
+            <h2 class="selected-perk-name">Perk Details</h2>
+
+            <p class="selected-perk-level">Level 0/0</p>
+          </div>
+        </header>
+        <section class="perk-description">
+          <h3>Description</h3>
         </section>
+      </aside>
     </main>
 
     <footer>
-        <p>
-            This is an unofficial fan-made character planner and is not
-            affiliated with or endorsed by The Fun Pimps.
-        </p>
+      <p>
+        This is an unofficial fan-made character planner and is not affiliated
+        with or endorsed by The Fun Pimps.
+      </p>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
